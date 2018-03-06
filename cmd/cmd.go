@@ -174,6 +174,10 @@ func New() *Cmd {
 			options = append(options, server.Listener(v))
 		}
 
+		// On Heroku, PORT var must be read at runtime
+		port := os.Getenv("PORT")
+		options = append(options, server.Listener(port))
+
 		if v := c.String("tls-listener"); v != "" {
 			options = append(options, server.TLSListener(v))
 		}
