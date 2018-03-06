@@ -1,0 +1,1 @@
+web: transfersh --provider local --basedir /tmp/
