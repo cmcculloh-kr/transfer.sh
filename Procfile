@@ -1,1 +1,1 @@
-web: transfersh --provider local --basedir /tmp/
+web: transfersh --listener :8080 --provider local --basedir /tmp/
